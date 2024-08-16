@@ -21,12 +21,12 @@ export default function Inicio() {
               alt="Gráficos e uma pessoa com dinheiro na mão"
             />
           </div>
-          <div className={estilos.vantagens}>
+          <div  className={estilos.vantagens}>
             <h2 data-test="vantagem">
               Vantagens do nosso banco:
             </h2>
             <div className={estilos.vantagens__itens}>
-              <div className={estilos.vantagens__item}>
+              <div  data-test="div_suprema" className={estilos.vantagens__item}>
                 <img data-test="imagens" src={presente} alt="ícone de um presente" />
                 <h3 data-test="anuncio">
                   Conta e cartão gratuitos!
@@ -58,7 +58,7 @@ export default function Inicio() {
               </div>
               <div className={estilos.vantagens__item}>
                 <img
-                  data-test="imagens"
+                data-test="imagens"
                   src={dispositivo}
                   alt="ícone de um dispositivo como notebook"
                 />

@@ -52,5 +52,11 @@ describe('template spec', () => {
       cy.visit('http://localhost:3000')
       cy.getByData('imagens').should("be.visible")
   })
+
+describe('Testes das Div', () => {
+it('Deve verificar se o h3 tem texto!', () => {
+  cy.visit('http://localhost:3000')
+  cy.identifyByData("div_suprema").find("h3").should("contain", "Conta e cartão gratuitos!")
+})})
 })
 })
