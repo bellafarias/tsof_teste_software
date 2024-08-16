@@ -26,7 +26,9 @@ export default function Inicio() {
             <div className={estilos.vantagens__itens}>
               <div className={estilos.vantagens__item}>
                 <img src={presente} alt="ícone de um presente" />
-                <h3>Conta e cartão gratuitos</h3>
+                <h3 data-test="anuncio">
+                  Conta e cartão gratuitos!
+                </h3>
                 <p>
                   Isso mesmo, nossa conta é digital, sem custo fixo e mais que
                   isso: sem tarifa de manutenção.
@@ -53,7 +55,7 @@ export default function Inicio() {
                   src={dispositivo}
                   alt="ícone de um dispositivo como notebook"
                 />
-                <h3>Seguro Dispositivos</h3>
+                <h3 data-test="seguro">Seguro de onde estiver!</h3>
                 <p>
                   Seus dispositivos móveis (computador e laptop) protegidos por
                   uma mensalidade simbólica.
