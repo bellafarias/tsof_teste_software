@@ -14,5 +14,9 @@ describe('template spec', () => {
     cy.visit('http://localhost:3000')
     cy.getByData('anuncio').contains('Conta e cartão gratuitos!')
   })
+  it('Deve renderizar h3-seguro com o texto correto!', () => {
+    cy.visit('http://localhost:3000')
+    cy.getByData('seguro').contains('Seguro de onde estiver!')
+  })
 })
 })
