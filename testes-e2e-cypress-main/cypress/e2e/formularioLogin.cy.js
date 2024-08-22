@@ -7,7 +7,26 @@ describe('Formulário de login', () => {
     cy.getByData('email-input').type('neilton@alura')
     cy.getByData('senha-input').type('123456')
     cy.getByData('botao-enviar').click()
-    cy.getByData('mensagem-erro').should('exist')
-    // .and('have-text', 'o email digitado é inválido')
+    cy.getByData('mensagem-erro').should('exist').and('have.text', 'O email digitado é inválido')
+    })
+
+    it('Não deve permitir o campo email em branco', () => {
+        cy.visit('http://localhost:3000')
+        cy.getByData('botao-login').click()
+        cy.getByData('senha-input').type('123456')
+        cy.getByData('botao-enviar').click()
+        cy.getByData('mensagem-erro').should('exist').and('have.text', 'O campo email é obrigatório')
+    })
+
+    it('Não deve permitir o campo senha em branco', () => {
+        cy.visit('http://localhost:3000')
+        cy.getByData('botao-login').click()
+        cy.getByData('email-input').type('neilton@alura.com')
+        cy.getByData('botao-enviar').click()
+        cy.getByData('mensagem-erro').should('exist').and('have.text', 'O campo de senha é obrigatório')
     })
 })
+
+    
+
+    
