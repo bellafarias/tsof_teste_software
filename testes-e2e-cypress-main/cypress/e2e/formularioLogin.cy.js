@@ -1,5 +1,6 @@
 describe('Formulário de login', () => { 
     beforeEach(()=> {
+        
     cy.visit('/')})
         it('Não deve permitir um e-mail inválido!', () => {
         cy.getByData('botao-login').click()
